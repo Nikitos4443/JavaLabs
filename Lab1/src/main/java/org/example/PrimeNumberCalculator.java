@@ -38,6 +38,10 @@ public class PrimeNumberCalculator {
             throw new IllegalArgumentException("There are no prime numbers before 2");
         }
 
+        if(n > 1_000_000) {
+            throw new IllegalArgumentException("This program will not count prime numbers after 1_000_000");
+        }
+
         List<Integer> primeNumbers = new ArrayList<>();
 
         boolean[] isPrime = new boolean[n + 1];
@@ -63,11 +67,11 @@ public class PrimeNumberCalculator {
     }
 
     private String convertToBinary(Integer number) {
-        String bin = "";
+        StringBuilder sb = new StringBuilder();
         while (number > 0) {
-            bin = (number % 2) + bin;
+            sb.append(number % 2);
             number /= 2;
         }
-        return bin;
+        return sb.reverse().toString();
     }
 }
