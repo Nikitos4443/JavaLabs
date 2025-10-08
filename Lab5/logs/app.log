@@ -1,0 +1,131 @@
+жовт. 04, 2025 9:06:58 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 9:07:04 ПП org.example.files.Files getRowWithMaxWords
+INFO: Пошук рядка з найбільшою кількістю слів у файлі file.txt
+жовт. 04, 2025 9:07:04 ПП org.example.files.Files getRowWithMaxWords
+INFO: Рядок з найбільшою кількістю слів: "djlwakd pawf;awl [pkfoawko jpowafpw" (5 слів)
+жовт. 04, 2025 9:07:04 ПП org.example.files.Files encryptInput
+INFO: Шифрування введення з ключем 5
+жовт. 04, 2025 9:07:14 ПП org.example.files.Files encryptOrDecryptInput
+INFO: Шифрування виконано успішно
+жовт. 04, 2025 9:07:14 ПП org.example.files.Files decryptInput
+INFO: Дешифрування введення з ключем 5
+жовт. 04, 2025 9:07:19 ПП org.example.files.Files encryptOrDecryptInput
+INFO: Дешифрування виконано успішно
+жовт. 04, 2025 9:07:19 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:07:45 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://developer.mozilla.org/en-US/
+жовт. 04, 2025 9:07:46 ПП org.example.files.Files getTags
+INFO: Отримано 56 тегів зі сторінки
+жовт. 04, 2025 9:07:46 ПП org.example.files.Files getSortedTags
+INFO: Сортування завершено (DESC)
+жовт. 04, 2025 9:07:59 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 9:08:01 ПП org.example.files.Files getRowWithMaxWords
+INFO: Пошук рядка з найбільшою кількістю слів у файлі h
+жовт. 04, 2025 9:08:01 ПП org.example.files.Files getRowWithMaxWords
+SEVERE: Помилка при читанні файлу h
+java.io.FileNotFoundException: /home/nikitos4443/IdeaProjects/JavaLabs/Lab5/src/main/java/org/example/files/txtFiles/h (Немає такого файла або каталогу)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:185)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at org.example.files.Files.getRowWithMaxWords(Files.java:80)
+	at org.example.Main.main(Main.java:14)
+
+жовт. 04, 2025 9:13:04 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:13:08 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://chatgpt.com/c/68e15bfd-ebac-832a-9c3c-293a6c079ad1
+жовт. 04, 2025 9:13:09 ПП org.example.files.Files getAllContentByURL
+SEVERE: Помилка при зчитуванні сторінки: https://chatgpt.com/c/68e15bfd-ebac-832a-9c3c-293a6c079ad1
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://chatgpt.com/c/68e15bfd-ebac-832a-9c3c-293a6c079ad1
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1700)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223)
+	at org.example.files.Files.getAllContentByURL(Files.java:185)
+	at org.example.files.Files.getTags(Files.java:165)
+	at org.example.files.Files.getSortedTags(Files.java:144)
+	at org.example.Main.main(Main.java:37)
+
+жовт. 04, 2025 9:13:22 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:13:26 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://developer.mozilla.org/en-US/
+жовт. 04, 2025 9:13:26 ПП org.example.files.Files getTags
+INFO: Отримано 56 тегів зі сторінки
+жовт. 04, 2025 9:13:26 ПП org.example.files.Files getSortedTags
+INFO: Сортування завершено (DESC)
+жовт. 04, 2025 9:14:25 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:14:29 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://developer.mozilla.org/en-US/
+жовт. 04, 2025 9:14:30 ПП org.example.files.Files getTags
+INFO: Отримано 56 тегів зі сторінки
+жовт. 04, 2025 9:14:30 ПП org.example.files.Files getSortedTags
+INFO: Сортування завершено (DESC)
+жовт. 04, 2025 9:31:46 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:38:55 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 9:43:18 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+
+жовт. 04, 2025 9:43:47 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+
+жовт. 04, 2025 9:44:01 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 9:44:53 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 9:44:59 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://developer.mozilla.org/en-US/
+жовт. 04, 2025 9:45:00 ПП org.example.files.Files getTags
+INFO: Отримано 56 тегів зі сторінки
+жовт. 04, 2025 9:45:00 ПП org.example.files.Files getSortedTags
+INFO: Сортування завершено (DESC)
+жовт. 04, 2025 9:45:07 ПП org.example.files.Files encryptInput
+INFO: Шифрування введення з ключем 5
+жовт. 04, 2025 10:42:48 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 10:42:52 ПП org.example.files.Files getRowWithMaxWords
+INFO: Пошук рядка з найбільшою кількістю слів у файлі file.txt\
+жовт. 04, 2025 10:42:52 ПП org.example.files.Files getRowWithMaxWords
+SEVERE: Помилка при читанні файлу file.txt\
+java.io.FileNotFoundException: /home/nikitos4443/IdeaProjects/JavaLabs/Lab5/src/main/java/org/example/files/txtFiles/file.txt\ (Немає такого файла або каталогу)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:185)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at org.example.files.Files.getRowWithMaxWords(Files.java:82)
+	at org.example.Main.main(Main.java:43)
+
+жовт. 04, 2025 10:43:08 ПП org.example.files.Files readFileName
+INFO: Запит імені файлу від користувача...
+жовт. 04, 2025 10:43:10 ПП org.example.files.Files getRowWithMaxWords
+INFO: Пошук рядка з найбільшою кількістю слів у файлі file.txt
+жовт. 04, 2025 10:43:10 ПП org.example.files.Files getRowWithMaxWords
+INFO: Рядок з найбільшою кількістю слів: "djlwakd pawf;awl [pkfoawko jpowafpw" (5 слів)
+жовт. 04, 2025 10:43:20 ПП org.example.files.Files encryptInput
+INFO: Шифрування введення з ключем 5
+жовт. 04, 2025 10:44:01 ПП org.example.files.Files encryptInput
+INFO: Шифрування введення з ключем 5
+жовт. 04, 2025 10:45:12 ПП org.example.files.Files encryptOrDecryptInput
+INFO: Шифрування введення з ключем 5
+жовт. 04, 2025 10:46:09 ПП org.example.files.Files encryptOrDecryptInput
+INFO: Шифрування виконано успішно
+жовт. 04, 2025 10:46:20 ПП org.example.files.Files encryptOrDecryptInput
+INFO: Дешифрування виконано успішно
+жовт. 04, 2025 10:46:23 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 10:46:55 ПП org.example.files.Files readURL
+INFO: Запит URL від користувача...
+жовт. 04, 2025 10:47:02 ПП org.example.files.Files getSortedTags
+INFO: Отримання та сортування тегів зі сторінки https://github.com/
+жовт. 04, 2025 10:47:03 ПП org.example.files.Files getTags
+INFO: Отримано 70 тегів зі сторінки
+жовт. 04, 2025 10:47:03 ПП org.example.files.Files getSortedTags
+INFO: Сортування завершено (DESC)

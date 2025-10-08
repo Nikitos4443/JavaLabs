@@ -118,7 +118,7 @@ public class SkiPassDaysLimitation extends SkiPass {
             if(remaining.toHours() <= Constants.oneWorkDayInHours) {
                 totalHours += remaining.toHours();
             } else {
-                totalHours += 8;
+                totalHours += Constants.oneWorkDayInHours;
             }
             remaining = remaining.minusDays(1);
         }

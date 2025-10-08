@@ -1,0 +1,1 @@
+{/home/nikitos4443/IdeaProjects/JavaLabs/Lab8/files2/hello/file.txt=[Vro, veru, vio]}

@@ -4,38 +4,72 @@ import org.example.enums.SortBy;
 import org.example.enums.SortOrder;
 import org.example.files.Files;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Files files = new Files();
+        Scanner scanner = new Scanner(System.in);
 
-        //1
         System.out.println("======================================");
-        var fileName = files.readFileName();
-        var row = files.getRowWithMaxWords(fileName);
-        System.out.println("The result: " + row);
+        System.out.println("Choose language / Виберіть мову:\n1. English\n2. Українська");
+        System.out.print("> ");
+        String langChoice = scanner.nextLine();
+
+        Locale locale;
+        if ("2".equals(langChoice)) {
+            locale = Locale.of("uk");
+        } else {
+            locale = Locale.of("en");
+        }
+
+        ResourceBundle rb = ResourceBundle.getBundle(
+                "location.messages",
+                locale
+        );
         System.out.println("======================================\n");
 
-        //3
-        byte key = 5;
-        System.out.println("======================================");
-        System.out.print("Enter the string you want this program to encrypt: ");
+        boolean running = true;
+        while (running) {
+            System.out.println(rb.getString("menu.options"));
+            System.out.print("> ");
+            String option = scanner.nextLine();
 
-        String encrypted = files.encryptInput(key);
-        System.out.println("The result: " + encrypted);
+            switch (option) {
+                case "1":
+                    String fileName = files.readFileName(rb.getString("prompt.filename"));
+                    var row = files.getRowWithMaxWords(fileName);
+                    System.out.println(rb.getString("result.row") + " " + row);
+                    break;
+                case "2":
+                    byte key = 5;
+                    System.out.print(rb.getString("prompt.stringEncrypt") + " ");
+                    String encrypted = files.encryptInput(key);
+                    System.out.println(rb.getString("result.encrypted") + " " + encrypted);
+                    break;
+                case "3":
+                    System.out.print(rb.getString("prompt.stringDecrypt") + " ");
+                    String decrypted = files.decryptInput((byte) 5);
+                    System.out.println(rb.getString("result.decrypted") + " " + decrypted);
+                    break;
+                case "4":
+                    String url = files.readURL(rb.getString("prompt.url"));
+                    System.out.println();
+                    var tags = files.getSortedTags(url, SortBy.FREQUENCY, SortOrder.DESC);
+                    System.out.println(tags);
+                    break;
+                case "0":
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Unknown option / Невідома опція");
+            }
 
-        System.out.println("======================================\n");
+            System.out.println();
+        }
 
-        System.out.println("======================================");
-        System.out.print("Enter the string you want this program to decrypt: ");
-        String decrypted = files.decryptInput(key);
-        System.out.println("The result: " + decrypted);
-        System.out.println("======================================\n");
-
-        //4
-        System.out.println("======================================");
-        var url = files.readURL();
-        var tags = files.getSortedTags(url, SortBy.FREQUENCY, SortOrder.DESC);
-        System.out.println(tags);
-        System.out.println("======================================");
+        System.out.println("Program exited. / Програма завершена.");
     }
 }

@@ -27,7 +27,7 @@ public class PersonEqualsTest {
 
         Person personToCompare = gson.fromJson(json, Person.class);
 
-        assertTrue(person.equals(personToCompare));
+        assertEquals(person, personToCompare);
     }
 
     @Test
@@ -42,6 +42,6 @@ public class PersonEqualsTest {
         Person personToCompare = gson.fromJson(json, Person.class);
         personToCompare.setAge(10);
 
-        assertFalse(person.equals(personToCompare));
+        assertNotEquals(person, personToCompare);
     }
 }
